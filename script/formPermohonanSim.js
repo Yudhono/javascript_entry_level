@@ -1,4 +1,5 @@
 function hitungUmur(tanggalLahir) {
+  // fungsi untuk mendapatkan tanggal hari ini
   const today = new Date();
   const birthDate = new Date(tanggalLahir);
 
