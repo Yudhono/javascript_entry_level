@@ -4,25 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learn JavaScript: Beginner Template</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="learning-section">
+                <h1>Learn JavaScript</h1>
+                <div class="subtitle">A beginner-friendly interactive playground to learn and practice JavaScript
+                    basics.</div>
+                <div class="learning-path"
+                    style="background:#f4faff;border-left:4px solid #4e9cff;padding:18px 18px 8px 18px;margin-bottom:28px;border-radius:4px;">
+                    <h2 style="color:#4e9cff;font-size:1.2em;margin-top:0;">JavaScript Learning Path</h2>
+                    <ol style="margin-left:1em;">
+                        <li><b>Introduction & Setup</b><br><span style="font-size:0.97em;">What is JavaScript? How to
+                                run JS in
+                                the browser.</span></li>
+                        <li><b>Variables & Data Types</b><br><span style="font-size:0.97em;">let, const, var, strings,
+                                numbers,
+                                booleans.</span></li>
+                        <li><b>Operators & Expressions</b><br><span style="font-size:0.97em;">+, -, *, /, %, =, ==, ===,
+                                and
+                                more.</span></li>
+                        <li><b>Control Flow</b><br><span style="font-size:0.97em;">if, else, else if, switch.</span>
+                        </li>
+                        <li><b>Loops</b><br><span style="font-size:0.97em;">for, while, do...while.</span></li>
+                        <li><b>Functions</b><br><span style="font-size:0.97em;">Declaring and calling functions,
+                                parameters,
+                                return values.</span></li>
+                        <li><b>Arrays & Objects</b><br><span style="font-size:0.97em;">Basic array and object
+                                usage.</span></li>
+                        <li><b>DOM Basics <span style="font-size:0.9em; color:#888;">(optional)</span></b><br><span
+                                style="font-size:0.97em;">How to change web pages with JavaScript.</span></li>
+                        <li><b>Practice Projects</b><br><span style="font-size:0.97em;">Try making a calculator, to-do
+                                list, or
+                                your own ideas!</span></li>
+                    </ol>
+                    <div style="margin-top:10px;font-size:0.97em;color:#444;">Work through each step, try the examples,
+                        and
+                        experiment in the code editor below!</div>
+                </div>
+                <div class="examples-exercises" style="margin-bottom:28px;">
+                    <h2 style="color:#2d6cdf;font-size:1.1em;margin-bottom:10px;">Step-by-Step Examples & Exercises</h2>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>1. Introduction & Setup</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">// This is a comment\nconsole.log('JavaScript is running!');</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Change the message to your own greeting and run the code.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>2. Variables & Data Types</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let age = 15;\nconst name = \"Alex\";\nconsole.log(name + ' is ' + age + ' years old.');</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Create a variable for your favorite color and print it.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>3. Operators & Expressions</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let sum = 7 + 3;\nlet isEqual = (sum === 10);\nconsole.log('Sum:', sum);\nconsole.log('Is sum 10?', isEqual);</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Try using -, *, /, and % operators with numbers and print the results.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>4. Control Flow</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let score = 85;\nif (score >= 80) {\n  console.log('Great job!');\n} else {\n  console.log('Keep practicing!');\n}</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Change the score value and see what message you get.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>5. Loops</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">for (let i = 1; i <= 5; i++) {\n  console.log('Number:', i);\n}</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Write a loop that prints even numbers from 2 to 10.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>6. Functions</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">function greet(name) {\n  console.log('Hello, ' + name + '!');\n}\ngreet('Sam');</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Create a function that multiplies two numbers and prints the result.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>7. Arrays & Objects</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let fruits = ['apple', 'banana', 'cherry'];\nconsole.log(fruits[1]); // banana\nlet person = { name: 'Lina', age: 20 };\nconsole.log(person.name);</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Create an array of three animals and print the second one.</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>8. DOM Basics (optional)</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">// This only works in a real web page, not the code runner above!\ndocument.body.style.background = '#ffe4e1';</pre>
+                            <b>Exercise:</b>
+                            <ul>
+                                <li>Try changing the page background color using JavaScript (open browser console to
+                                    test).</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>9. Practice Projects</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Ideas:</b>
+                            <ul>
+                                <li>Make a simple calculator (add, subtract, multiply, divide two numbers).</li>
+                                <li>Build a to-do list (array of tasks, add/remove items).</li>
+                                <li>Write a program that asks for a name and prints a greeting.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
 
-        <div>
-            <h1>Cek ganjil genap</h1>
-            <form id="form-sim">
-                <label for="Angka">Masukkan angka:</label>
-                <input type="number" name="angka" id="angka" required>
-                <button id="buttonCek" type="submit">Cek</button>
-                <h3 id="resultSIM" style="display: none;"></h3>
-            </form>
+            <div class="editor-section">
+                <div class="instructions">
+                    <p>Welcome! Edit the JavaScript code below and click <b>Run Code</b> to see the result. Try changing
+                        the
+                        code and experiment to learn how JavaScript works!</p>
+                    <ul>
+                        <li>Use <code>console.log()</code> to print output.</li>
+                        <li>Try math, variables, functions, and more.</li>
+                        <li>Errors will also show in the output area.</li>
+                    </ul>
+                </div>
+                <div class="editor-label">JavaScript Editor</div>
+                <textarea id="code" spellcheck="false">// Try editing this code!
+    console.log('Hello, world!');
+
+    // You can do math:
+    console.log(2 + 3 * 4);
+
+    // Try making a variable:
+    let name = 'Student';
+    console.log('Welcome, ' + name + '!');
+    </textarea>
+                <div class="editor-actions">
+                    <button class="run-btn" onclick="runCode()">Run Code ▶</button>
+                    <button class="reset-btn" onclick="resetCode()">Reset</button>
+                </div>
+                <div class="output-label">Output:</div>
+                <div id="output"></div>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-
-<script src="./script/ganjilAtauGenap.js"></script>
 
 </html>
