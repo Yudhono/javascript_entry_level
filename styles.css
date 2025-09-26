@@ -71,6 +71,32 @@ h1 {
   margin-bottom: 32px;
 }
 
+.exercise-controls {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.exercise-level {
+  font-size: 0.95em;
+  color: #333;
+}
+
+.exercise-btn {
+  margin-left: 8px;
+  background: #4e9cff;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.exercise-btn:hover {
+  background: #3a86e0;
+}
+
 .examples-exercises h2 {
   color: #2563eb;
   font-size: 1.08em;
