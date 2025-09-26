@@ -51,18 +51,32 @@ const EXERCISES = {
 
 function loadExercise(topic, level) {
   if (EXERCISES[topic] && EXERCISES[topic][level]) {
-    document.getElementById("code").value = EXERCISES[topic][level];
+    // If Ace editor is initialized, use it, otherwise fallback to textarea
+    if (window.editor && typeof window.editor.setValue === "function") {
+      window.editor.setValue(EXERCISES[topic][level], -1);
+      window.editor.focus();
+    } else {
+      const ta = document.getElementById("code");
+      if (ta) ta.value = EXERCISES[topic][level];
+    }
     // clear output when loading
-    document.getElementById("output").textContent = "";
+    const out = document.getElementById("output");
+    if (out) out.textContent = "";
   } else {
     console.warn("Exercise not found:", topic, level);
   }
 }
 
 function runCode() {
-  const code = document.getElementById("code").value;
+  let code = "";
+  if (window.editor && typeof window.editor.getValue === "function") {
+    code = window.editor.getValue();
+  } else {
+    const ta = document.getElementById("code");
+    code = ta ? ta.value : "";
+  }
   const outputDiv = document.getElementById("output");
-  outputDiv.textContent = "";
+  if (outputDiv) outputDiv.textContent = "";
   const originalLog = console.log;
   const originalError = console.error;
   let output = "";
@@ -77,11 +91,77 @@ function runCode() {
   } catch (e) {
     output += "Error: " + e.message + "\n";
   }
-  outputDiv.textContent = output;
+  if (outputDiv) outputDiv.textContent = output;
   console.log = originalLog;
   console.error = originalError;
 }
 
 function resetCode() {
-  document.getElementById("code").value = defaultCode;
+  if (window.editor && typeof window.editor.setValue === "function") {
+    window.editor.setValue(defaultCode, -1);
+    window.editor.focus();
+  } else {
+    const ta = document.getElementById("code");
+    if (ta) ta.value = defaultCode;
+  }
+}
+
+// Initialize Monaco Editor via AMD loader. Falls back to textarea if Monaco not available.
+function initMonaco() {
+  if (!window.require) {
+    console.warn("Monaco AMD loader not available");
+    return;
+  }
+  // Configure base path for Monaco
+  window.require.config({
+    paths: { vs: "https://cdn.jsdelivr.net/npm/monaco-editor@0.39.0/min/vs" },
+  });
+  window.require(["vs/editor/editor.main"], function () {
+    try {
+      window.monacoEditor = monaco.editor.create(
+        document.getElementById("editor"),
+        {
+          value: defaultCode,
+          language: "javascript",
+          theme: "vs-dark",
+          automaticLayout: true,
+          minimap: { enabled: false },
+        }
+      );
+
+      // Map editor get/set functions used by other functions
+      window.editor = {
+        getValue: () => window.monacoEditor.getValue(),
+        setValue: (v) => window.monacoEditor.setValue(v),
+        focus: () => window.monacoEditor.focus(),
+      };
+
+      // Add run shortcut (Ctrl/Cmd + Enter)
+      window.monacoEditor.addCommand(
+        monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter,
+        function () {
+          runCode();
+        }
+      );
+
+      const themeSelect = document.getElementById("themeSelect");
+      if (themeSelect) {
+        themeSelect.addEventListener("change", (e) => {
+          try {
+            monaco.editor.setTheme(e.target.value);
+          } catch (err) {
+            console.warn(err);
+          }
+        });
+      }
+    } catch (err) {
+      console.error("Monaco init failed", err);
+    }
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initMonaco);
+} else {
+  initMonaco();
 }

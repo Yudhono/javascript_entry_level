@@ -245,17 +245,20 @@
                         <li>Errors will also show in the output area.</li>
                     </ul>
                 </div>
-                <div class="editor-label">JavaScript Editor</div>
-                <textarea id="code" spellcheck="false">// Try editing this code!
-    console.log('Hello, world!');
-
-    // You can do math:
-    console.log(2 + 3 * 4);
-
-    // Try making a variable:
-    let name = 'Student';
-    console.log('Welcome, ' + name + '!');
-    </textarea>
+                <div class="editor-label">JavaScript Editor <span class="kbd-hint">(Press Ctrl/Cmd + Enter to
+                        run)</span></div>
+                <div class="editor-toolbar">
+                    <div class="editor-theme">Theme:
+                        <select id="themeSelect">
+                            <option value="vs-dark">Dark (vs-dark)</option>
+                            <option value="vs">Light (vs)</option>
+                            <option value="hc-black">High Contrast</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="editor"></div>
+                <!-- Fallback textarea for environments where Monaco fails to load -->
+                <textarea id="code" spellcheck="false" style="display:none;"></textarea>
                 <div class="editor-actions">
                     <button class="run-btn" onclick="runCode()">Run Code ▶</button>
                     <button class="reset-btn" onclick="resetCode()">Reset</button>
@@ -265,6 +268,8 @@
             </div>
         </div>
     </div>
+    <!-- Monaco Editor loader (provides VS Code-like editor in the browser) -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.39.0/min/vs/loader.js"></script>
     <script src="script.js"></script>
 </body>
 

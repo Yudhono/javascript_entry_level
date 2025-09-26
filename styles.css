@@ -22,19 +22,25 @@ body {
 }
 
 .learning-section {
-  flex: 1;
+  flex: 1 1 0%;
   padding: 32px 24px;
   overflow-y: auto;
   max-height: calc(100vh - 80px);
 }
 
 .editor-section {
-  flex: 1;
+  flex: 1 1 0%;
   padding: 32px 24px;
   background: #fafbfc;
   border-left: 1px solid #e1e5e9;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* allow flex children to shrink instead of overflowing */
+}
+
+/* Ensure learning section can shrink in tight layouts */
+.learning-section {
+  min-width: 0;
 }
 
 h1 {
@@ -146,6 +152,38 @@ pre {
   font-weight: 500;
   margin-bottom: 6px;
   color: #2563eb;
+}
+
+.kbd-hint {
+  font-weight: 400;
+  font-size: 0.85em;
+  color: #666;
+  margin-left: 8px;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.editor-toolbar select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}
+
+#editor {
+  width: 100%;
+  height: 300px;
+  border-radius: 6px;
+  border: 1px solid #b6c6e3;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ace_editor.ace-monokai {
+  border-radius: 6px;
 }
 
 #code {
