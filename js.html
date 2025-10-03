@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JavaScript: Beginner Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div style="display:flex;justify-content:flex-end;margin-bottom:8px;"><a href="index.html"
+                style="text-decoration:none;color:#2563eb;font-weight:600">Home</a></div>
+        <div class="content-wrapper">
+            <div class="learning-section">
+                <h1>Learn JavaScript</h1>
+                <div class="subtitle">A beginner-friendly interactive playground to learn and practice JavaScript
+                    basics.</div>
+                <div class="learning-path"
+                    style="background:#f4faff;border-left:4px solid #4e9cff;padding:18px 18px 8px 18px;margin-bottom:28px;border-radius:4px;">
+                    <h2 style="color:#4e9cff;font-size:1.2em;margin-top:0;">JavaScript Learning Path</h2>
+                    <ol style="margin-left:1em;">
+                        <li><b>Introduction & Setup</b><br><span style="font-size:0.97em;">What is JavaScript? How to
+                                run JS in
+                                the browser.</span></li>
+                        <li><b>Variables & Data Types</b><br><span style="font-size:0.97em;">let, const, var, strings,
+                                numbers,
+                                booleans.</span></li>
+                        <li><b>Operators & Expressions</b><br><span style="font-size:0.97em;">+, -, *, /, %, =, ==, ===,
+                                and
+                                more.</span></li>
+                        <li><b>Control Flow</b><br><span style="font-size:0.97em;">if, else, else if, switch.</span>
+                        </li>
+                        <li><b>Loops</b><br><span style="font-size:0.97em;">for, while, do...while.</span></li>
+                        <li><b>Functions</b><br><span style="font-size:0.97em;">Declaring and calling functions,
+                                parameters,
+                                return values.</span></li>
+                        <li><b>Arrays & Objects</b><br><span style="font-size:0.97em;">Basic array and object
+                                usage.</span></li>
+                        <li><b>DOM Basics <span style="font-size:0.9em; color:#888;">(optional)</span></b><br><span
+                                style="font-size:0.97em;">How to change web pages with JavaScript.</span></li>
+                        <li><b>Practice Projects</b><br><span style="font-size:0.97em;">Try making a calculator, to-do
+                                list, or
+                                your own ideas!</span></li>
+                    </ol>
+                    <div style="margin-top:10px;font-size:0.97em;color:#444;">Work through each step, try the examples,
+                        and
+                        experiment in the code editor below!</div>
+                    <div style="margin-top:12px;">
+                        <a href="html-css.html"
+                            style="display:inline-block;background:#ff6b6b;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:600">Learn
+                            HTML &amp; CSS </a>
+                        <span style="margin-left:8px;color:#555;font-size:0.95em">New: interactive HTML &amp; CSS
+                            playground</span>
+                    </div>
+                </div>
+                <div class="examples-exercises" style="margin-bottom:28px;">
+                    <h2 style="color:#2d6cdf;font-size:1.1em;margin-bottom:10px;">Step-by-Step Examples & Exercises</h2>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>1. Introduction & Setup</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">// This is a comment\nconsole.log('JavaScript is running!');</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('intro','easy')">Load</button>  Change the greeting
+                                    message.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('intro','medium')">Load</button>  Print current
+                                    date/time.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('intro','hard')">Load</button>  Prompt for name and
+                                    greet.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>2. Variables & Data Types</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let age = 15;\nconst name = \"Alex\";\nconsole.log(name + ' is ' + age + ' years old.');</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('variables','easy')">Load</button>  Create a variable for
+                                    your favorite color and print it.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('variables','medium')">Load</button>  Swap two variables
+                                    without a temporary variable.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('variables','hard')">Load</button>  Parse a number from a
+                                    string and add 10 to it.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>3. Operators & Expressions</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let sum = 7 + 3;\nlet isEqual = (sum === 10);\nconsole.log('Sum:', sum);\nconsole.log('Is sum 10?', isEqual);</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('operators','easy')">Load</button>  Use -, *, /, % and
+                                    print results.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('operators','medium')">Load</button>  Check if a number
+                                    is even or odd and print result.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('operators','hard')">Load</button>  Implement FizzBuzz up
+                                    to 15 and log results.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>4. Control Flow</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let score = 85;\nif (score >= 80) {\n  console.log('Great job!');\n} else {\n  console.log('Keep practicing!');\n}</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('control','easy')">Load</button>  Change the score and
+                                    show messages.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('control','medium')">Load</button>  Use switch to map a
+                                    number (17) to a weekday name.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('control','hard')">Load</button>  Determine whether a
+                                    year is a leap year.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>5. Loops</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">for (let i = 1; i <= 5; i++) {\n  console.log('Number:', i);\n}</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('loops','easy')">Load</button>  Print even numbers from 2
+                                    to 10.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('loops','medium')">Load</button>  Sum numbers from 1 to
+                                    20 and print the total.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('loops','hard')">Load</button>  Generate a multiplication
+                                    table for a number (e.g., 7).</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>6. Functions</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">function greet(name) {\n  console.log('Hello, ' + name + '!');\n}\ngreet('Sam');</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('functions','easy')">Load</button>  Create a function
+                                    that multiplies two numbers and logs the result.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('functions','medium')">Load</button>  Write a function
+                                    that returns the nth Fibonacci number.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('functions','hard')">Load</button>  Write a function that
+                                    accepts an array and a callback, and returns a filtered array.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>7. Arrays & Objects</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">let fruits = ['apple', 'banana', 'cherry'];\nconsole.log(fruits[1]); // banana\nlet person = { name: 'Lina', age: 20 };\nconsole.log(person.name);</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('arrays','easy')">Load</button>  Create array of three
+                                    animals and print the second.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('arrays','medium')">Load</button>  Count occurrences of a
+                                    value in an array.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('arrays','hard')">Load</button>  Sort an array of objects
+                                    by a numeric property.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>8. DOM Basics (optional)</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre
+                                style="background:#f6f8fa;padding:10px;border-radius:4px;">// This only works in a real web page, not the code runner above!\ndocument.body.style.background = '#ffe4e1';</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('dom','easy')">Load</button>  Change page background
+                                    color (open console to test).</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('dom','medium')">Load</button>  Create and append a new
+                                    paragraph to the page.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('dom','hard')">Load</button>  Toggle a CSS class on an
+                                    element every second.</div>
+                            </div>
+                        </div>
+                    </details>
+                    <details style="margin-bottom:10px;">
+                        <summary><b>9. Practice Projects</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Ideas:</b>
+                            <ul>
+                                <li>Make a simple calculator (add, subtract, multiply, divide two numbers).</li>
+                                <li>Build a to-do list (array of tasks, add/remove items).</li>
+                                <li>Write a program that asks for a name and prints a greeting.</li>
+                            </ul>
+                            <b>Starter Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExercise('projects','easy')">Load</button>  Small greeting app
+                                    (prompt for name).</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExercise('projects','medium')">Load</button>  Simple calculator
+                                    function (two numbers, four operations).</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExercise('projects','hard')">Load</button>  To-do list starter:
+                                    add/remove items from an array and log tasks.</div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="editor-section">
+                <div class="instructions">
+                    <p>Welcome! Edit the JavaScript code below and click <b>Run Code</b> to see the result. Try changing
+                        the
+                        code and experiment to learn how JavaScript works!</p>
+                    <ul>
+                        <li>Use <code>console.log()</code> to print output.</li>
+                        <li>Try math, variables, functions, and more.</li>
+                        <li>Errors will also show in the output area.</li>
+                    </ul>
+                </div>
+                <div class="editor-label">JavaScript Editor <span class="kbd-hint">(Press Ctrl/Cmd + Enter to
+                        run)</span></div>
+                <div class="editor-toolbar">
+                    <div class="editor-theme">Theme:
+                        <select id="themeSelect">
+                            <option value="vs-dark">Dark (vs-dark)</option>
+                            <option value="vs">Light (vs)</option>
+                            <option value="hc-black">High Contrast</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="editor"></div>
+                <!-- Fallback textarea for environments where Monaco fails to load -->
+                <textarea id="code" spellcheck="false" style="display:none;"></textarea>
+                <div class="editor-actions">
+                    <button class="run-btn" onclick="runCode()">Run Code </button>
+                    <button class="reset-btn" onclick="resetCode()">Reset</button>
+                </div>
+                <div class="output-label">Output:</div>
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Monaco Editor loader (provides VS Code-like editor in the browser) -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.39.0/min/vs/loader.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
