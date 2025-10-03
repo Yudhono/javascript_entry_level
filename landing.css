@@ -13,7 +13,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
 }
 .brand {
   font-weight: 700;
@@ -78,9 +77,11 @@ body {
 .editor-sample .line {
   padding: 4px 0;
 }
-.features {
-  padding: 36px 0;
+.site-header .main-container {
+  margin-top: 0;
+  padding: 20px;
 }
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

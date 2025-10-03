@@ -22,9 +22,54 @@
 
 .editor-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* place preview on top spanning both columns, editors underneath side-by-side */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   gap: 12px;
-  align-items: stretch; /* ensure panels stretch and don't overlap */
+  align-items: start;
+  grid-auto-rows: minmax(120px, auto);
+}
+.panel {
+  background: #fff;
+  border: 1px solid #e6eef8;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  /* prevent panels from overlapping and allow internal scrolling when content grows */
+  overflow: hidden;
+}
+
+/* Page-specific styles for HTML & CSS playground */
+.content-wrapper {
+  /* Force vertical stacking for this page so the editor sits below the learning content */
+  flex-direction: column;
+  gap: 18px;
+  /* allow the wrapper to grow and scroll naturally on this page */
+  overflow: visible !important;
+  min-height: auto !important;
+}
+.learning-section {
+  /* allow learning content to expand naturally when stacked */
+  max-height: none;
+  overflow: visible;
+}
+.editor-section {
+  border-left: none; /* remove left border when stacked */
+  border-top: 1px solid #e1e5e9;
+  padding-top: 18px;
+  /* prevent editor from trying to share vertical flex space with the learning section */
+  flex: none;
+}
+
+.editor-grid {
+  display: grid;
+  /* Preview on top (spans full width). HTML and CSS editors sit side-by-side beneath. */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+  align-items: start;
   grid-auto-rows: minmax(120px, auto);
 }
 .panel {
@@ -67,27 +112,38 @@
   background: #fdfefe;
   overflow: auto;
 }
+
+/* Preview panel spans entire grid width */
 .preview-panel {
-  min-height: 260px;
+  grid-column: 1 / -1; /* span all columns */
+  min-height: 320px;
   display: flex;
   flex-direction: column;
 }
+
+/* Preview iframe styling */
 #preview {
   width: 100%;
-  /* fixed-ish preview height so iframe has space and won't collapse overlapping editors */
-  height: 320px;
+  height: 360px;
   border-radius: 6px;
   border: 1px solid #cbd5e1;
   background: white;
+  display: block;
 }
+
 @media (max-width: 1024px) {
+  /* Stack editors vertically on narrower screens; preview remains full width on top */
   .editor-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
   }
   #htmlCode,
   #cssCode {
     height: auto;
     min-height: 160px;
+  }
+  #preview {
+    height: 300px;
   }
 }
 
