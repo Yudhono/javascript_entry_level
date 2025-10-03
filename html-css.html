@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Learn HTML & CSS — Interactive Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="html-css.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="learning-section">
+                <h1>Learn HTML & CSS</h1>
+                <div class="subtitle">Beginner friendly guide with short examples and a live editor to practice — just
+                    like CodePen.</div>
+
+                <div class="learning-path" style="border-left-color:#ff6b6b;">
+                    <h2 style="color:#ff6b6b;">HTML & CSS Learning Path</h2>
+                    <ol>
+                        <li><b>Introduction</b> — HTML structure (elements, tags, attributes)</li>
+                        <li><b>Text & Links</b> — headings, paragraphs, anchors</li>
+                        <li><b>Images & Media</b> — <code>&lt;img&gt;</code>, responsive images</li>
+                        <li><b>Box Model</b> — margin, border, padding, width/height</li>
+                        <li><b>Layout Basics</b> — display, position, flexbox</li>
+                        <li><b>Styling</b> — colors, fonts, backgrounds</li>
+                        <li><b>Forms & Inputs</b> — basic form elements</li>
+                        <li><b>Practice Projects</b> — small page components & experiments</li>
+                    </ol>
+                    <div style="margin-top:10px;">Tip: use the editor to edit HTML & CSS and press Run or enable
+                        Auto-run to see changes live.</div>
+                </div>
+
+                <div class="examples-exercises">
+                    <h2 style="color:#ff6b6b;">Examples & Exercises</h2>
+
+                    <details>
+                        <summary><b>1. Simple page structure</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>&lt;!doctype html&gt;\n&lt;html&gt;\n  &lt;body&gt;\n    &lt;h1&gt;Hello&lt;/h1&gt;\n    &lt;p&gt;A paragraph.&lt;/p&gt;\n  &lt;/body&gt;\n&lt;/html&gt;</pre>
+
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('structure','easy')">Load</button> — Create a heading and
+                                    paragraph.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('structure','medium')">Load</button> — Add a link and
+                                    image.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('structure','hard')">Load</button> — Build a small card
+                                    with heading, image, and text.</div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>2. Box model & layout</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>.box { padding:16px; border:1px solid #ccc; margin:8px; }</pre>
+
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('box','easy')">Load</button> — Make a colored box.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('box','medium')">Load</button> — Add padding and border
+                                    radius.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('box','hard')">Load</button> — Use flexbox to align items
+                                    horizontally.</div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>3. Typography & colors</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>h1 { color:#ff6b6b; font-family: Arial, sans-serif; }</pre>
+
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('typography','easy')">Load</button> — Change heading color
+                                    and font.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('typography','medium')">Load</button> — Add a background
+                                    gradient.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('typography','hard')">Load</button> — Create a simple
+                                    responsive typography scale.</div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>4. Images & Media</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>&lt;img src="https://via.placeholder.com/300x150" alt="placeholder"&gt;</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('images','easy')">Load</button> — Insert an image and make
+                                    it responsive.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('images','medium')">Load</button> — Add a caption under an
+                                    image.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('images','hard')">Load</button> — Create a media card with
+                                    cropped thumbnail.</div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>5. Layout Basics</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>.row { display:flex; gap:12px; }</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('layout','easy')">Load</button> — Create two columns with
+                                    flexbox.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('layout','medium')">Load</button> — Wrap items and make
+                                    them responsive.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('layout','hard')">Load</button> — Build a CSS grid layout.
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>6. Styling</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>h2 { color:#0ea5e9; }</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('styling','easy')">Load</button> — Change heading color &
+                                    font.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('styling','medium')">Load</button> — Create a card with
+                                    shadow and gradient.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('styling','hard')">Load</button> — Use CSS variables for
+                                    colors.</div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>7. Forms & Inputs</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Example:</b>
+                            <pre>&lt;label&gt;Name: &lt;input /&gt;&lt;/label&gt;</pre>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('forms','easy')">Load</button> — Basic text input.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('forms','medium')">Load</button> — Email and number inputs
+                                    with validation.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('forms','hard')">Load</button> — Styled login form.</div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary><b>8. Practice Projects</b></summary>
+                        <div style="margin:10px 0 0 18px;">
+                            <b>Ideas:</b>
+                            <ul>
+                                <li>Simple landing header</li>
+                                <li>Small gallery or card grid</li>
+                                <li>Responsive hero section</li>
+                            </ul>
+                            <b>Exercises:</b>
+                            <div class="exercise-controls">
+                                <div class="exercise-level">Easy: <button class="exercise-btn"
+                                        onclick="loadExample('projects','easy')">Load</button> — Starter page.</div>
+                                <div class="exercise-level">Medium: <button class="exercise-btn"
+                                        onclick="loadExample('projects','medium')">Load</button> — Gallery layout.</div>
+                                <div class="exercise-level">Hard: <button class="exercise-btn"
+                                        onclick="loadExample('projects','hard')">Load</button> — Small landing starter.
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+                </div>
+
+            </div>
+
+            <div class="editor-section">
+                <div class="instructions">
+                    <p>Edit the HTML and CSS panels. Click <b>Run</b> to update the preview. Enable <b>Auto-run</b> to
+                        update live as you type.</p>
+                    <ul>
+                        <li>HTML goes into the left panel, CSS into the right.</li>
+                        <li>The preview uses an isolated iframe, so changes are safe and immediate.</li>
+                        <li>Use the Load buttons to try guided exercises.</li>
+                    </ul>
+                </div>
+
+                <div class="editor-toolbar">
+                    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                        <button class="run-btn" onclick="runPreview()">Run ▶</button>
+                        <button class="reset-btn" onclick="resetEditors()">Reset</button>
+                        <button id="formatBtn" class="format-btn" disabled>Loading…</button>
+                        <label style="display:flex;align-items:center;gap:6px;margin-left:6px;">Auto-run <input
+                                id="autoRun" type="checkbox" onchange="setAutoRun(this.checked)"></label>
+                        <select id="templateSelect" onchange="loadTemplate(this.value)">
+                            <option value="basic">Starter: Basic Page</option>
+                            <option value="card">Starter: Card Component</option>
+                            <option value="layout">Starter: Flex Layout</option>
+                        </select>
+                    </div>
+                    <div style="margin-left:auto;color:#666;font-size:0.95em;">Tip: Press Ctrl/Cmd + Enter to run</div>
+                </div>
+
+                <div class="editor-grid">
+                    <div class="panel">
+                        <div class="panel-label">HTML</div>
+                        <div id="htmlEditor" style="height:260px;border-radius:6px;overflow:hidden"></div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-label">CSS</div>
+                        <div id="cssEditor" style="height:260px;border-radius:6px;overflow:hidden"></div>
+                    </div>
+                    <div class="panel preview-panel">
+                        <div class="panel-label">Preview</div>
+                        <iframe id="preview" sandbox="allow-same-origin allow-forms allow-scripts" srcdoc=""
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Monaco editor loader -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.39.0/min/vs/loader.js"></script>
+    <!-- Prettier standalone + parser-html for formatting HTML/CSS -->
+    <script src="https://unpkg.com/prettier@2.8.8/standalone.js"></script>
+    <script src="https://unpkg.com/prettier@2.8.8/parser-html.js"></script>
+    <script src="https://unpkg.com/prettier@2.8.8/parser-postcss.js"></script>
+    <script src="html-css.js"></script>
+</body>
+
+</html>

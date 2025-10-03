@@ -1,0 +1,110 @@
+/* Page-specific styles for HTML & CSS playground */
+.content-wrapper {
+  /* Force vertical stacking for this page so the editor sits below the learning content */
+  flex-direction: column;
+  gap: 18px;
+  /* allow the wrapper to grow and scroll naturally on this page */
+  overflow: visible !important;
+  min-height: auto !important;
+}
+.learning-section {
+  /* allow learning content to expand naturally when stacked */
+  max-height: none;
+  overflow: visible;
+}
+.editor-section {
+  border-left: none; /* remove left border when stacked */
+  border-top: 1px solid #e1e5e9;
+  padding-top: 18px;
+  /* prevent editor from trying to share vertical flex space with the learning section */
+  flex: none;
+}
+
+.editor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: stretch; /* ensure panels stretch and don't overlap */
+  grid-auto-rows: minmax(120px, auto);
+}
+.panel {
+  background: #fff;
+  border: 1px solid #e6eef8;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  /* prevent panels from overlapping and allow internal scrolling when content grows */
+  overflow: hidden;
+}
+
+/* Monaco editor container sizing */
+#htmlEditor,
+#cssEditor {
+  width: 100%;
+  height: 260px;
+}
+.panel-label {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+#htmlCode,
+#cssCode {
+  width: 100%;
+  /* let the textarea size with its panel; set sensible min/max so it won't cause overflow of the layout */
+  height: auto;
+  min-height: 160px;
+  max-height: 45vh;
+  box-sizing: border-box;
+  font-family: "Fira Mono", monospace;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dfe8f4;
+  resize: vertical;
+  background: #fdfefe;
+  overflow: auto;
+}
+.preview-panel {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+#preview {
+  width: 100%;
+  /* fixed-ish preview height so iframe has space and won't collapse overlapping editors */
+  height: 320px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: white;
+}
+@media (max-width: 1024px) {
+  .editor-grid {
+    grid-template-columns: 1fr;
+  }
+  #htmlCode,
+  #cssCode {
+    height: auto;
+    min-height: 160px;
+  }
+}
+
+/* Format button styling */
+.format-btn {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.format-btn:hover {
+  background: #0e9a3d;
+}
+.format-btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
