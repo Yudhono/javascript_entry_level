@@ -1,13 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f4f7fb;
   margin: 0;
   padding: 0;
+  /* layout: make header/main/footer stack and allow main to expand */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main-container {
+  /* allow the container to span the full viewport width while constraining
+     readable line-length on very large screens */
+  width: 100%;
   max-width: 1400px;
-  padding: 20px;
+  margin: 0 auto; /* center the container on wide viewports */
+  /* use logical padding so it behaves well in different writing modes */
+  padding-inline: 20px;
+  padding-block: 20px;
+  box-sizing: border-box;
 }
 
 .content-wrapper {
@@ -17,7 +33,21 @@ body {
   border-radius: 14px;
   box-shadow: 0 4px 24px #0002;
   overflow: hidden;
+  /* let the parent (main) control sizing; keep min-height when needed for editor layout */
   min-height: calc(100vh - 80px);
+}
+
+/* allow main content area to grow so footer stays at bottom on short pages */
+main {
+  flex: 1 0 auto;
+}
+
+/* The main page content (hero + sections) should grow to fill available
+   vertical space so footer sits at the bottom on short pages */
+.page-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
 .learning-section {

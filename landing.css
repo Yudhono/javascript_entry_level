@@ -28,6 +28,10 @@ body {
 }
 .hero-section {
   padding: 48px 0;
+  /* make the hero area occupy the majority of the viewport on short pages
+     assume header + footer consume ~120px; adjust if your header/footer grow */
+  display: flex;
+  align-items: center; /* vertical center the inner .main-container */
 }
 .hero-grid {
   display: grid;
