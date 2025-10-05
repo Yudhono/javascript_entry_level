@@ -1,0 +1,271 @@
+/* Styles specific to the components showcase, built to complement existing styles.css */
+.components-grid {
+  display: grid;
+  /* fixed two-column layout on wider screens for a cleaner gallery */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.component {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.component h2 {
+  margin-top: 0;
+  color: #1f4ed8;
+}
+
+.example-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+.btn.outline {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+.btn.ghost {
+  background: transparent;
+  color: #333;
+}
+.btn.small {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eef2f7;
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  padding: 12px;
+}
+
+.simple-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #243b55;
+}
+.simple-form input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d9e6;
+}
+
+.select-wrap select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: white;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2563eb;
+}
+.code-block {
+  background: #0f1724;
+  color: #e6eef8;
+  padding: 12px;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.code-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+.copy-btn {
+  background: #e6eef8;
+  border: 1px solid #cfe0ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* small tweaks for mobile */
+@media (max-width: 640px) {
+  .components-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Live editor layout */
+.live-editor {
+  margin-top: 12px;
+  border-top: 1px dashed #e6eef8;
+  padding-top: 12px;
+}
+.small-gap {
+  margin-top: 8px;
+}
+.editor-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.editor-controls .run-live,
+.editor-controls .reset-live {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  cursor: pointer;
+}
+.editor-controls .run-live {
+  background: #2563eb;
+  color: #fff;
+  border-color: #1f4ed8;
+}
+.auto-run-label {
+  margin-left: 8px;
+  color: #445;
+}
+.editor-panels {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.panel {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+.panel-label {
+  font-size: 0.9em;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+.editor-textarea {
+  width: 100%;
+  height: 120px;
+  font-family: Menlo, monospace;
+  font-size: 13px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d9e6;
+  background: #fbfdff;
+  resize: vertical;
+}
+.preview-iframe {
+  width: 100%;
+  height: 160px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+@media (max-width: 640px) {
+  .editor-panels {
+    flex-direction: column;
+  }
+  .preview-iframe {
+    height: 200px;
+  }
+}
+
+/* Monaco-like editor styles for small embedded editors */
+.editor-details summary {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f6f9ff;
+  margin-bottom: 10px;
+}
+.editor-row {
+  display: grid;
+  /* single-column stack: HTML editor above CSS editor, preview below both */
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.editor-column {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.editor-column:nth-of-type(1) .monaco-editor {
+  /* HTML editor slightly taller */
+  height: 220px;
+}
+.editor-column:nth-of-type(2) .monaco-editor {
+  /* CSS editor a bit shorter to balance the layout */
+  height: 160px;
+}
+.editor-preview {
+  /* full-width preview below editors */
+  width: 100%;
+}
+.monaco-label {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.monaco-editor {
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dfe7fb;
+  background: #0b1220; /* darker background to mimic code editor */
+}
+.editor-preview {
+  min-width: 260px;
+}
+
+/* Monaco editor inner container is injected by loader; make it full height */
+.monaco-editor .monaco-editor,
+.monaco-editor .overflow-guard,
+.monaco-editor .view-lines {
+  height: 100% !important;
+}
+
+@media (max-width: 980px) {
+  /* single column layout on narrower screens */
+  .components-grid {
+    grid-template-columns: 1fr;
+  }
+  .editor-row {
+    grid-template-columns: 1fr;
+  }
+  .editor-column {
+    grid-column: auto;
+  }
+  .editor-preview {
+    grid-column: auto;
+    order: 3;
+  }
+  /* stack editors with comfortable heights on mobile */
+  .editor-column:nth-of-type(1) .monaco-editor,
+  .editor-column:nth-of-type(2) .monaco-editor {
+    height: 200px;
+  }
+}

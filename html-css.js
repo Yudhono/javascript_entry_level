@@ -5,7 +5,7 @@ const TEMPLATES = {
     css: `body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:16px; color:#1f2937; }\nheader { background:#fff3f2; padding:16px; border-radius:8px; border:1px solid #fee2e2; }\nh1 { margin:0; color:#ef4444; }\n`,
   },
   card: {
-    html: `<!doctype html>\n<html><body>\n  <div class=\"card\">\n    <img src=\"https://via.placeholder.com/300x140\" alt=\"placeholder\">\n    <h3>Card title</h3>\n    <p>Short description about this card.</p>\n  </div>\n</body></html>`,
+    html: `<!doctype html>\n<html><body>\n  <div class=\"card\">\n    <img src=\"https://picsum.photos/300/140\" alt=\"placeholder\">\n    <h3>Card title</h3>\n    <p>Short description about this card.</p>\n  </div>\n</body></html>`,
     css: `.card{width:320px;border-radius:10px;overflow:hidden;border:1px solid #e5e7eb;box-shadow:0 6px 18px rgba(0,0,0,0.06);}\n.card img{display:block;width:100%;height:auto;}\n.card h3{margin:12px 16px 4px;}\n.card p{margin:0 16px 16px;color:#374151;font-size:0.95rem;}`,
   },
   layout: {
@@ -121,11 +121,11 @@ const EXAMPLES = {
       css: "",
     },
     medium: {
-      html: '<!doctype html>\n<html>\n  <body>\n    <h1>Image & Link</h1>\n    <a href="https://example.com">Visit</a>\n    <img src="https://via.placeholder.com/150" alt="pic">\n  </body>\n</html>',
+      html: '<!doctype html>\n<html>\n  <body>\n    <h1>Image & Link</h1>\n    <a href="https://example.com">Visit</a>\n    <img src="https://picsum.photos/150/150" alt="pic">\n  </body>\n</html>',
       css: "",
     },
     hard: {
-      html: '<!doctype html>\n<html>\n  <body>\n    <div class="card">\n      <img src="https://via.placeholder.com/300x140">\n      <h3>Card title</h3>\n      <p>Card text</p>\n    </div>\n  </body>\n</html>',
+      html: '<!doctype html>\n<html>\n  <body>\n    <div class="card">\n      <img src="https://picsum.photos/300/140">\n      <h3>Card title</h3>\n      <p>Card text</p>\n    </div>\n  </body>\n</html>',
       css: ".card{width:320px;border:1px solid #ddd;padding:10px;border-radius:8px;}",
     },
   },
@@ -159,16 +159,16 @@ const EXAMPLES = {
   },
   images: {
     easy: {
-      html: '<h2>Image</h2>\n<img src="https://via.placeholder.com/300x150" alt="placeholder">',
+      html: '<h2>Image</h2>\n<img src="https://picsum.photos/300/150" alt="placeholder">',
       css: "img{display:block;margin:8px 0;max-width:100%;height:auto;} ",
     },
     medium: {
-      html: '<figure>\n  <img src="https://via.placeholder.com/600x300" alt="hero">\n  <figcaption>A responsive image with caption</figcaption>\n</figure>',
+      html: '<figure>\n  <img src="https://picsum.photos/600/300" alt="hero">\n  <figcaption>A responsive image with caption</figcaption>\n</figure>',
       css: "figure{max-width:640px;}figure img{width:100%;height:auto;border-radius:8px;}figcaption{color:#6b7280;font-size:0.95rem;margin-top:6px;}",
     },
     hard: {
-      html: '<div class="media-card">\n  <div class="thumb"></div>\n  <h3>Media card</h3>\n  <p>Uses object-fit to crop image</p>\n</div>',
-      css: ".media-card{width:320px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}.media-card .thumb{height:160px;background:url(https://via.placeholder.com/600x400) center/cover no-repeat}",
+      html: '<div class="media-card">\n  <div class="thumb" style="background:url(https://picsum.photos/600/400) center/cover no-repeat;"></div>\n  <h3>Media card</h3>\n  <p>Uses object-fit to crop image</p>\n</div>',
+      css: ".media-card{width:320px;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden}.media-card .thumb{height:160px;background:url(https://picsum.photos/600/400) center/cover no-repeat}",
     },
   },
   layout: {
