@@ -85,6 +85,28 @@
   background: white;
 }
 
+/* Demo table styling used in the examples */
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inherit;
+  margin-top: 8px;
+}
+.demo-table th,
+.demo-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6eef8;
+  text-align: left;
+}
+.demo-table thead th {
+  background: #f6f9ff;
+  color: #243b55;
+  font-weight: 700;
+}
+.demo-table tbody tr:hover {
+  background: #fbfcff;
+}
+
 details summary {
   cursor: pointer;
   font-weight: 600;

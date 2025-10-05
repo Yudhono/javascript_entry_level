@@ -18,6 +18,10 @@
       html: `<div class=\"select-wrap\">\n  <select>\n    <option>Choose an option</option>\n    <option>Option A</option>\n    <option>Option B</option>\n  </select>\n</div>`,
       css: `.select-wrap select { padding:8px 12px; border-radius:8px; border:1px solid #cbd5e1; }`,
     },
+    tables: {
+      html: `<table class="demo-table">\n  <thead>\n    <tr><th>Item</th><th>Description</th><th>Price</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Alpha</td><td>Sample row description</td><td>$12</td></tr>\n    <tr><td>Beta</td><td>Another sample</td><td>$20</td></tr>\n    <tr><td>Gamma</td><td>Yet another row</td><td>$7</td></tr>\n  </tbody>\n</table>`,
+      css: `.demo-table { width:100%; border-collapse:collapse; font-family:inherit }\n.demo-table th, .demo-table td { padding:10px 12px; border-bottom:1px solid #e6eef8; text-align:left }\n.demo-table thead th { background:#f6f9ff; color:#243b55; font-weight:700 }\n.demo-table tbody tr:hover { background:#fbfcff }`,
+    },
   };
 
   // store editor instances
