@@ -22,6 +22,10 @@
       html: `<table class="demo-table">\n  <thead>\n    <tr><th>Item</th><th>Description</th><th>Price</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Alpha</td><td>Sample row description</td><td>$12</td></tr>\n    <tr><td>Beta</td><td>Another sample</td><td>$20</td></tr>\n    <tr><td>Gamma</td><td>Yet another row</td><td>$7</td></tr>\n  </tbody>\n</table>`,
       css: `.demo-table { width:100%; border-collapse:collapse; font-family:inherit }\n.demo-table th, .demo-table td { padding:10px 12px; border-bottom:1px solid #e6eef8; text-align:left }\n.demo-table thead th { background:#f6f9ff; color:#243b55; font-weight:700 }\n.demo-table tbody tr:hover { background:#fbfcff }`,
     },
+    navbar: {
+      html: `<nav class="demo-navbar" aria-label="Demo navigation">\n  <div class="brand">Brand</div>\n  <div class="nav-links">\n    <a href="#">Home</a>\n    <a href="#">Docs</a>\n    <a href="#">Components</a>\n  </div>\n  <div class="nav-cta"><button class="btn primary">Sign up</button></div>\n</nav>`,
+      css: `.demo-navbar { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:8px 12px; border-radius:8px; background:#ffffff }\n.demo-navbar .brand { font-weight:700; color:#1f4ed8 }\n.demo-navbar .nav-links a { margin-right:10px; color:#243b55; text-decoration:none }\n.demo-navbar .nav-cta .btn { margin-left:8px }`,
+    },
   };
 
   // store editor instances

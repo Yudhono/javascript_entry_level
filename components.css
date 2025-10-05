@@ -107,6 +107,30 @@
   background: #fbfcff;
 }
 
+/* Demo navbar styling used in navigation examples */
+.demo-navbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #eef2f7;
+}
+.demo-navbar .brand {
+  font-weight: 700;
+  color: #1f4ed8;
+}
+.demo-navbar .nav-links a {
+  margin-right: 10px;
+  color: #243b55;
+  text-decoration: none;
+}
+.demo-navbar .nav-cta .btn {
+  margin-left: 8px;
+}
+
 details summary {
   cursor: pointer;
   font-weight: 600;
