@@ -26,6 +26,14 @@
       html: `<nav class="demo-navbar" aria-label="Demo navigation">\n  <div class="brand">Brand</div>\n  <div class="nav-links">\n    <a href="#">Home</a>\n    <a href="#">Docs</a>\n    <a href="#">Components</a>\n  </div>\n  <div class="nav-cta"><button class="btn primary">Sign up</button></div>\n</nav>`,
       css: `.demo-navbar { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:8px 12px; border-radius:8px; background:#ffffff }\n.demo-navbar .brand { font-weight:700; color:#1f4ed8 }\n.demo-navbar .nav-links a { margin-right:10px; color:#243b55; text-decoration:none }\n.demo-navbar .nav-cta .btn { margin-left:8px }`,
     },
+    flexbox: {
+      html: `<div class="demo-flex">\n  <div class="flex-item">A</div>\n  <div class="flex-item">B</div>\n  <div class="flex-item">C</div>\n</div>`,
+      css: `.demo-flex { display:flex; gap:12px; align-items:center }\n.demo-flex .flex-item { background:#fff; border:1px solid #eef2f7; padding:14px; border-radius:8px; flex:1; text-align:center }`,
+    },
+    grid: {
+      html: `<div class="demo-grid">\n  <div class="grid-item">1</div>\n  <div class="grid-item">2</div>\n  <div class="grid-item">3</div>\n  <div class="grid-item">4</div>\n  <div class="grid-item">5</div>\n  <div class="grid-item">6</div>\n</div>`,
+      css: `.demo-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px }\n.demo-grid .grid-item { background:#fff; border:1px solid #eef2f7; padding:18px; border-radius:8px; text-align:center }`,
+    },
   };
 
   // store editor instances
