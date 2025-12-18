@@ -32,7 +32,6 @@ const Header: React.FC = () => {
           >
             Components
           </a>
-          <a href="#courses">Courses</a>
         </nav>
       </div>
     </header>
