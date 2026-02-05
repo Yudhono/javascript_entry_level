@@ -11,10 +11,7 @@ const ComponentsPage: React.FC = () => {
         style={{ paddingTop: "28px", paddingBottom: "28px" }}
       >
         <h1>Components</h1>
-        <p className="subtitle">
-          UI component library — live examples, editable HTML/CSS (Monaco) and
-          previews.
-        </p>
+        <p className="subtitle">Saya rubah ini ya</p>
 
         <section className="components-grid">
           {/* Buttons */}
@@ -25,6 +22,8 @@ const ComponentsPage: React.FC = () => {
               <button className="btn outline">Outline</button>
               <button className="btn ghost">Ghost</button>
               <button className="btn small">Small</button>
+              <button className="btn small">MEDIUM</button>
+              <button className="btn small">BIG</button>
             </div>
 
             <details className="editor-details">
